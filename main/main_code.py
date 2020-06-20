@@ -10,6 +10,7 @@ from docxtpl import DocxTemplate
 from docxcompose.composer import Composer
 
 
+
 # some random comment, remote change
 def getText(template_file_path):
     doc = docx.Document(template_file_path)
@@ -18,6 +19,9 @@ def getText(template_file_path):
         fullText.append(para.text)
     return ' '.join(fullText)
 
+#this works
+def exp1(asd):
+    return asd
 
 def generate_files(template_file_path, output_folder_path, input_dict):
     for count, local_dict in enumerate(input_dict):
