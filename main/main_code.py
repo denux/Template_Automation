@@ -10,19 +10,12 @@ from docxtpl import DocxTemplate
 from docxcompose.composer import Composer
 
 
-
-# some random comment, remote change
 def getText(template_file_path):
     doc = docx.Document(template_file_path)
     fullText = []
     for para in doc.paragraphs:
         fullText.append(para.text)
     return ' '.join(fullText)
-
-#this works
-def exp1(asd):
-    return asd
-
 
 
 def generate_files(template_file_path, output_folder_path, input_dict):
@@ -42,9 +35,6 @@ def get_config():
         dict_json = json.load(f)
         return dict_json
 
-#some changes done meanwhile
-def someother_fun(asd):
-    return asd
 
 def main_fun():
     excel_folder = pathlib.Path(str(pathlib.Path().cwd().parent) + "/excel_data")
@@ -71,7 +61,6 @@ def main_fun():
     list_context = df.to_dict("records")
     generate_files(template_file_path, output_folder_path, list_context)
 
-print(someother_fun("asd"))
 
 if __name__ == "__main__":
     main_fun()
