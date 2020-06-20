@@ -10,6 +10,7 @@ from docxtpl import DocxTemplate
 from docxcompose.composer import Composer
 
 
+#some random comment
 def getText(template_file_path):
     doc = docx.Document(template_file_path)
     fullText = []
