@@ -41,7 +41,7 @@ def main_fun():
     excel_file_path = glob.glob(str(excel_folder) + "/*.*")[0]
     template_folder = pathlib.Path(str(pathlib.Path().cwd().parent) + "/template")
     template_file_path = glob.glob(str(template_folder) + "/*.*")[0]
-    output_folder_path = str(pathlib.Path(str(pathlib.Path().cwd().parent) + "/output")) + "\\"
+    output_folder_path = str(pathlib.Path(str(pathlib.Path().cwd().parent) + "/template")) + "\\"
     extension_type = excel_file_path.split(".")[-1]
     if extension_type == "xlsx":
         df = pd.read_excel(excel_file_path)
