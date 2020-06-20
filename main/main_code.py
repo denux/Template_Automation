@@ -19,9 +19,7 @@ def getText(template_file_path):
     return ' '.join(fullText)
 
 
-#some changes done meanwhile
-def someother_fun(asd):
-    return asd
+
 
 def generate_files(template_file_path, output_folder_path, input_dict):
     for count, local_dict in enumerate(input_dict):
@@ -40,6 +38,9 @@ def get_config():
         dict_json = json.load(f)
         return dict_json
 
+#some changes done meanwhile
+def someother_fun(asd):
+    return asd
 
 def main_fun():
     excel_folder = pathlib.Path(str(pathlib.Path().cwd().parent) + "/excel_data")
@@ -66,6 +67,7 @@ def main_fun():
     list_context = df.to_dict("records")
     generate_files(template_file_path, output_folder_path, list_context)
 
+print(someother_fun("asd"))
 
 if __name__ == "__main__":
     main_fun()
