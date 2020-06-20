@@ -19,6 +19,10 @@ def getText(template_file_path):
     return ' '.join(fullText)
 
 
+#some changes done meanwhile
+def someother_fun(asd):
+    return asd
+
 def generate_files(template_file_path, output_folder_path, input_dict):
     for count, local_dict in enumerate(input_dict):
         doc = DocxTemplate(template_file_path)
